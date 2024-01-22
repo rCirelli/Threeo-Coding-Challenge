@@ -28,7 +28,7 @@ export default class CalculateController {
   public async subtract(req: Request, res: Response) {
     try {
       const [num1, num2] = this.getNumbers(req);
-      const result = this.calc.sum(num1, num2);
+      const result = this.calc.subtract(num1, num2);
       res.status(200).send(result.toString());
     } catch (error) {
       if (error instanceof Error) {
