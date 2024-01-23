@@ -1,7 +1,7 @@
-//import loginRoute from './login.routes';
+import loginRoute from './login.routes';
 import calculateRoute from './calculate.routes';
 
 export {
-  //loginRoute,
+  loginRoute,
   calculateRoute
 };
