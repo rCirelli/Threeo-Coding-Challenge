@@ -1,5 +1,7 @@
+import 'express-async-errors';
 import express from 'express';
 import * as router from './routes';
+import errorMiddleware from './middlewares/error.middleware';
 
 class App {
   public app: express.Express;
@@ -9,6 +11,8 @@ class App {
 
     this.config();
     this.router();
+
+    this.app.use(errorMiddleware);
   }
 
   private config():void {
@@ -16,6 +20,7 @@ class App {
   }
 
   private router():void {
+    this.app.use('/login', router.loginRoute);
     this.app.use('/calc', router.calculateRoute);
   }
 
