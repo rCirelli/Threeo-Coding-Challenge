@@ -2,7 +2,7 @@
 
 const baseUrl = 'http://localhost:3003/';
 
-export async function calculate(prevState: any, formData: FormData) {
+export async function calculate(_prevState: any, formData: FormData) {
   const n1 = formData.get('n1');
   const n2 = formData.get('n2');
   const operation = formData.get('operation');
