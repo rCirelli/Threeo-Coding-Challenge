@@ -3,7 +3,7 @@ import * as jwt from 'jsonwebtoken';
 import User from '../database/entities/User';
 import HttpException from './HttpException';
 
-const secret = process.env.JWT_SECRET as string;
+const secret = process.env.JWT_SECRET as string || 'my-jwt-secret';
 
 class JwtUtils {
   private jwt = jwt;
