@@ -14,6 +14,8 @@ cd backend
 
 npm install
 
+npm run init
+
 npm run dev
 ```
 
